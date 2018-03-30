@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{55D9E12B-8008-4DAD-8CB6-5A128777340C}</ProjectGuid>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>AppRopio.Models.Basket</RootNamespace>
+    <AssemblyName>AppRopio.Models.Basket</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Profile151</TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Requests\BasketValidateRequest.cs" />
+    <Compile Include="Requests\ConfirmDeliveryAddressRequest.cs" />
+    <Compile Include="Requests\ConfirmDeliveryPointRequest.cs" />
+    <Compile Include="Requests\ConfirmPaymentRequest.cs" />
+    <Compile Include="Requests\DeliveryPointRequest.cs" />
+    <Compile Include="Requests\NeedToLoadRequest.cs" />
+    <Compile Include="Responses\Basket\BasketModel.cs" />
+    <Compile Include="Responses\Basket\BasketItem.cs" />
+    <Compile Include="Responses\Order\Delivery.cs" />
+    <Compile Include="Responses\Order\OrderField.cs" />
+    <Compile Include="Responses\Order\DeliveryPoint.cs" />
+    <Compile Include="Responses\Order\Payment.cs" />
+    <Compile Include="Responses\Order\FieldsValidation.cs" />
+    <Compile Include="Responses\Enums\DeliveryType.cs" />
+    <Compile Include="Responses\Enums\OrderFieldType.cs" />
+    <Compile Include="Responses\Order\Order.cs" />
+    <Compile Include="Requests\DeliveryPriceRequest.cs" />
+    <Compile Include="Requests\ConfirmUserRequest.cs" />
+    <Compile Include="Responses\Order\Field.cs" />
+    <Compile Include="Responses\Order\OrderFieldsGroup.cs" />
+    <Compile Include="Responses\Order\DeliveryDay.cs" />
+    <Compile Include="Responses\Order\DeliveryTime.cs" />
+    <Compile Include="Requests\ConfirmDeliveryTimeRequest.cs" />
+    <Compile Include="Requests\ChangeQuantityRequest.cs" />
+    <Compile Include="Requests\ConfirmDeliveryRequest.cs" />
+    <Compile Include="Responses\Basket\BasketValidity.cs" />
+    <Compile Include="Requests\ConfirmOrderRequest.cs" />
+    <Compile Include="Responses\Basket\BasketAmount.cs" />
+    <Compile Include="Responses\Order\ConfirmedOrderInfo.cs" />
+    <Compile Include="Responses\Order\PaymentNecessary.cs" />
+    <Compile Include="Responses\Order\OrderFieldAutocompleteValue.cs" />
+    <Compile Include="Requests\DeliveryAddressRequest.cs" />
+    <Compile Include="Requests\OrderFieldAutocompleteRequest.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\AppRopio.Models.Base\AppRopio.Models.Base.csproj">
+      <Project>{C4F2B57C-507E-4B99-B2E4-FA4B3C99FD59}</Project>
+      <Name>AppRopio.Models.Base</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AppRopio.Models.Products\AppRopio.Models.Products.csproj">
+      <Project>{B621BAAF-BBB9-43D8-9990-7431667877AC}</Project>
+      <Name>AppRopio.Models.Products</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AppRopio.Models.Payments\AppRopio.Models.Payments.csproj">
+      <Project>{36D85C96-D45F-465B-98E6-AF1BC36400D5}</Project>
+      <Name>AppRopio.Models.Payments</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+</Project>

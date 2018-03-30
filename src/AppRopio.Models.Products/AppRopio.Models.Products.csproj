@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B621BAAF-BBB9-43D8-9990-7431667877AC}</ProjectGuid>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>AppRopio.Models.Products</RootNamespace>
+    <AssemblyName>AppRopio.Models.Products</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Profile151</TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Requests\CategoriesRequest.cs" />
+    <Compile Include="Requests\ProductRequest.cs" />
+    <Compile Include="Requests\ProductShareRequest.cs" />
+    <Compile Include="Requests\ProductsRequest.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Responses\Banner.cs" />
+    <Compile Include="Responses\BannerPosition.cs" />
+    <Compile Include="Responses\Category.cs" />
+    <Compile Include="Responses\CategoryContainerType.cs" />
+    <Compile Include="Responses\PresentationType.cs" />
+    <Compile Include="Responses\Product.cs" />
+    <Compile Include="Responses\ProductBadge.cs" />
+    <Compile Include="Responses\ProductDetails.cs" />
+    <Compile Include="Responses\ProductParameter.cs" />
+    <Compile Include="Responses\ProductState.cs" />
+    <Compile Include="Responses\ProductStateType.cs" />
+    <Compile Include="Responses\Review.cs" />
+    <Compile Include="Responses\Autocomplete.cs" />
+    <Compile Include="Requests\ContentSearchRequest.cs" />
+    <Compile Include="Responses\ProductShare.cs" />
+    <Compile Include="Responses\ProductDataType.cs" />
+    <Compile Include="Responses\ProductWidgetType.cs" />
+    <Compile Include="Responses\ProductParameterValue.cs" />
+    <Compile Include="Responses\ApplyedProductParameter.cs" />
+    <Compile Include="Responses\ApplyedProductParameterValue.cs" />
+    <Compile Include="Requests\ApplyedParametersRequest.cs" />
+    <Compile Include="Requests\BannerRequest.cs" />
+    <Compile Include="Requests\ProductsCompilationRequest.cs" />
+    <Compile Include="Requests\ProductMarkRequest.cs" />
+    <Compile Include="Responses\ProductQuantity.cs" />
+    <Compile Include="Responses\Shop.cs" />
+    <Compile Include="Responses\Price.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AppRopio.Models.Base\AppRopio.Models.Base.csproj">
+      <Project>{C4F2B57C-507E-4B99-B2E4-FA4B3C99FD59}</Project>
+      <Name>AppRopio.Models.Base</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AppRopio.Models.Filters\AppRopio.Models.Filters.csproj">
+      <Project>{F538DE02-55D4-4F2F-9144-A94F70EB652A}</Project>
+      <Name>AppRopio.Models.Filters</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+</Project>
