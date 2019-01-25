@@ -34,9 +34,14 @@ namespace AppRopio.Models.Products.Responses
         //TODO: переделать Price с использованием модели Price
 
         /// <summary>
-        /// Текущая цена товара (наиболее выгодная для пользователя)
+        /// Текущая цена товара (наиболее выгодная/минимальная для пользователя)
         /// </summary>
         public decimal Price { get; set; }
+
+        /// <summary>
+        /// Максимально возможная цена товара
+        /// </summary>
+        public decimal? MaxPrice { get; set; }
 
         /// <summary>
         /// Единица измерения свойства Price
