@@ -5,5 +5,7 @@
         public string Value { get; set; }
 
         public string ValueName { get; set; }
+
+        public bool Selected { get; set; }
     }
 }
